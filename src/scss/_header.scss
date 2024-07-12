@@ -1,0 +1,29 @@
+header{
+    background-color: $violet;
+}
+.header-wrap{
+    @include display-f($jc:space-between);
+    padding: 20px 50px;
+    & .header-links{
+        @include display-f();
+        li{
+            padding-right: 40px;
+            a{
+                display: block;
+                color: $white;
+                @include fontvariable($size:20px , $w:700);
+            }
+        }
+    }
+    & .head-left{
+        a{
+            display: block;
+            @include fontvariable($size:40px , $w:700);
+            color: $orange;
+            @include tranistions-;
+            &:hover{
+                color: $red;
+            }
+        }
+    }
+}

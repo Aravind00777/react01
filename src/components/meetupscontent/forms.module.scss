@@ -1,0 +1,59 @@
+@import "/src/scss/mixins";
+@import"/src/scss/variables";
+    .cardborder{
+        margin-top: 50px;
+    }
+.forms{
+    width: 100%;
+    & .control{
+        width: 100%;
+        & .label{
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+        & .input{
+            width: 96%;
+            border: 0;
+            display: block;
+            outline: none;
+            font-size: 15px;
+            background-color: lightblue;
+            @include border-radius(10px);
+            padding: 10px 20px;
+            margin-top: 10px;
+}
+& .submits{
+    outline: none;
+    border: 2px solid black;
+    @include text-align();
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    overflow: hidden;
+    max-width: 220px;
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+    color: $orange;
+    cursor: pointer;
+    margin-top: 30px;
+    @include tranistions-;
+    @include psudeo(){
+        background-color: lightblue;
+        width: 100%;
+        height: 100%;
+        top: unset;
+        bottom: -100%;
+        @include tranistions-;
+    }
+    &:hover{
+        &::after{
+            bottom: 0;
+        }
+    }
+    
+}
+    }
+}

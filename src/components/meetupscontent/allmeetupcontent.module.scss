@@ -1,0 +1,65 @@
+@import "/src/scss/mixins";
+@import "/src/scss/variables";
+.li{
+    padding-bottom: 40px;
+    text-align: center;
+    
+}
+.bannerbg{
+    img{
+        @include fit-image();
+    }
+    
+
+}
+.headtag{
+    font-size: 30px !important;
+    padding-top: 30px;
+}
+.btn_next{
+    outline: none;
+    cursor: pointer;
+    border: 2px solid $blue;
+    padding: 10px 20px;
+    max-width: 200px;
+    width: 100%;
+    @include fontvariable($size:22px , $w:400);
+    overflow: hidden;
+    @include tranistions-;
+    @include psudeo(){
+        display: block;
+        height: 100%;
+        width: 100%;
+        transform: skew(90deg) translate(-50%, -50%);
+        inset: 50%;
+        left: 25%;
+        top: 22px;
+        bottom:unset;
+        right: unset;
+        transition: .5s ease-out;
+        background-color: $red;
+        
+    }
+    @include psudeo($loc:before){
+        display: block;
+        height: 100%;
+        width: 100%;
+        inset: 50%;
+        top: -50%;
+        left: -25%;
+        transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+        bottom:unset;
+        right: unset;
+        transition: .5s ease-out;
+        background-color:$red;
+    }
+    &:hover{
+        color: $white;
+        &::before{
+            transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+        }
+        &::after{
+            transform: skew(45deg) translate(-50%, -50%);
+        }
+    }
+}
